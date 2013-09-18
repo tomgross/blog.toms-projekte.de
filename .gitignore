@@ -1,0 +1,8 @@
+/bin
+Makefile
+develop_server.sh
+/include
+/lib
+*.py[co]
+/output
+.Python
