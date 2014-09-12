@@ -2,7 +2,8 @@ New Book: "Plone 3 Multimedia"
 ##############################
 :date: 2010-06-11 08:55
 :author: Tom
-:category: multimedia, plone
+:category: Plone
+:tags: Multimedia, Plone
 :slug: new-book-plone-3-multimedia
 
 I was tired of reading and answering all the p4a related questions on

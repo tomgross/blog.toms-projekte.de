@@ -2,7 +2,8 @@ Customize Plone translations with iw.recipe.cmd
 ###############################################
 :date: 2009-07-17 14:58
 :author: Tom
-:category: buildout, i18n, plone
+:category: Plone
+:tags: buildout, i18n, plone
 :slug: using-iw-recipe-cmd-to-customize-plone-translations
 
 Sometimes the good translations of Plone do not fit your usecase or
@@ -17,10 +18,14 @@ overridden on every "install" run of buildout. A solution I use (on
 Linux) is to maintain the translations in a directory *i18n* in the
 buildout and let a recipe copy it to the instance.
 
-| For the recipe I use `iw.recipe.cmd`_ and the buildout snippet looks
-like:
-| 
-`` [i18n] recipe = iw.recipe.cmd on_install = true on_update = true cmds = test -d ${instance:location}/i18n && rm -rf ${instance:location}/i18n || true cp -R ${buildout:directory}/i18n ${instance:location}/``
+For the recipe I use `iw.recipe.cmd`_ and the buildout snippet looks
+like this: ::
+
+ [i18n]
+ recipe = iw.recipe.cmd
+ on_install = true
+ on_update = true
+ cmds = test -d ${instance:location}/i18n && rm -rf ${instance:location}/i18n || true cp -R ${buildout:directory}/i18n ${instance:location}/
 
 **Update! 27.08.2010**\ This Recipe only works with Plone 3. For Plone 4
 and onwards it is not need any longer. The Plone i18n-domain can be
