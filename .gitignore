@@ -1,9 +1,10 @@
+*.pid
+*.py[co]
+.Python
 /bin
-Makefile
-develop_server.sh
+/cache
 /include
 /lib
-*.py[co]
 /output
-.Python
-*.pid
+Makefile
+develop_server.sh

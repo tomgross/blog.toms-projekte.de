@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Tom Gross'
 SITENAME = u'Toms Blog'
-SITEURL = ''
+SITEURL = 'http://blog.toms-projekte.de'
 
 THEME = "themes/pelican-bootstrap-responsive-theme"
 
