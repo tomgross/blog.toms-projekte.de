@@ -1,3 +1,3 @@
 [submodule "themes/pelican-bootstrap-responsive-theme"]
 	path = themes/pelican-bootstrap-responsive-theme
-	url = git@github.com:tomgross/pelican-bootstrap-responsive-theme.git
+	url = https://github.com/tomgross/pelican-bootstrap-responsive-theme.git
