@@ -6,3 +6,4 @@ develop_server.sh
 *.py[co]
 /output
 .Python
+*.pid
