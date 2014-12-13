@@ -4,7 +4,7 @@ Workaround setuptools 8.0 bug with zc.buildout
 :author: Tom
 :category: Plone
 :tags: Plone, setuptools, workaround
-:slug: workaround-setuptools-bug
+:slug: workaround-setuptools-buildout-bug
 
 Buildout always fetches the latest version of setuptools
 for bootstraping. No matter what is defined in versions.cfg.
@@ -48,39 +48,34 @@ to work fine. Do the following:
 
     $ wget https://bootstrap.pypa.io/ez_setup.py
 
- 3. Edit `ez_setup.py` and change the setuptools version to be used. ::
+ 3. Edit `ez_setup.py` and change the setuptools version to be used.::
 
-  39 DEFAULT_VERSION = "7.0"
-  40 DEFAULT_URL = "https://pypi.python.org/packages/source/s/setuptools/"
+     39 DEFAULT_VERSION = "7.0"
+     40 DEFAULT_URL = "https://pypi.python.org/packages/source/s/setuptools/"
 
- 4. Start a python webserver in the directory. ::
+ 4. Start a python webserver in the directory.::
 
-   $ python -m SimpleHTTPServer
+     $ python -m SimpleHTTPServer
 
-This will start a simple webserver listening on port 8000. You can specify another port if
-this one is taken on your system. ::
-
-   $ python -m SimpleHTTPServer 5000
-
-The server does not daemonize itself. The following actions need to be done in a
-new terminal.
+    The server does not daemonize itself. The following actions need to be done in a
+    new terminal.
 
  5. Now change the line where it downloads ez_setup.py in your
-    bootstrap.py file to use the patched ez_setup.py. ::
+    bootstrap.py file to use the patched ez_setup.py.::
 
-  77 ez = {}
-  78 exec(urlopen('http://localhost:8000/ez_setup.py'
-  79             ).read(), ez)
-  80 if not options.allow_site_packages:
+     77 ez = {}
+     78 exec(urlopen('http://localhost:8000/ez_setup.py'
+     79             ).read(), ez)
+     80 if not options.allow_site_packages:
 
  6. You are ready to start your working buildout. ::
 
-  tom@linux-zoc2:~/demobuildout> python bootstrap.py 
-  Downloading https://pypi.python.org/packages/source/s/setuptools/setuptools-7.0.zip
-  Extracting in /tmp/tmp82Jp3m
-  Now working in /tmp/tmp82Jp3m/setuptools-7.0
-  Building a Setuptools egg in /tmp/tmpgDuB3k
-  /tmp/tmpgDuB3k/setuptools-7.0-py2.7.egg
-  Generated script '/home/tom/demobuildout/bin/buildout'.
+     tom@linux-zoc2:~/demobuildout> python bootstrap.py 
+     Downloading https://pypi.python.org/packages/source/s/setuptools/setuptools-7.0.zip
+     Extracting in /tmp/tmp82Jp3m
+     Now working in /tmp/tmp82Jp3m/setuptools-7.0
+     Building a Setuptools egg in /tmp/tmpgDuB3k
+     /tmp/tmpgDuB3k/setuptools-7.0-py2.7.egg
+     Generated script '/home/tom/demobuildout/bin/buildout'.
 
 This works for me. Hope this bug is fixed soon anyway.
