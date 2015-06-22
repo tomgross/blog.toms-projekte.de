@@ -76,16 +76,16 @@ Now here is the WSGI config: ::
 
 The complete configuration files you can find in this `gist`_
 
-After running the buildout and start the instance with: ::
+After running the buildout we can start the instance with ::
 
  $ bin/paster serve zope.wsgi
 
-Have fun with a fresh Plone 5 instance :-)
+and have fun with a fresh and shiny Plone 5 instance :-)
 
 |Plone 5 WSGI Startpage|
 
-You can put static HTML, CSS and JavaScript in the static
-directory and accessing it directly.
+and we can put static HTML, CSS and JavaScript in the `static`
+directory and accessing them directly in our browser.
 
 |Plone 5 WSGI Helloworld|
 
