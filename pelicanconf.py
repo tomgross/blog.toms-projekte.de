@@ -1,14 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
 
-AUTHOR = u'Tom Gross'
-SITENAME = u'Toms Blog'
-SITEURL = 'http://blog.toms-projekte.de'
+AUTHOR = 'Tom Gross'
+SITENAME = 'Toms Blog'
+SITEURL = 'https://blog.itsonsense.com'
 
 THEME = "themes/pelican-bootstrap-responsive-theme"
 
-TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'Europe/Zurich'
 
 DEFAULT_LANG = u'en'
 
@@ -19,9 +18,9 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 # Blogroll
-LINKS =  (('Presenation Power', 'http://presentation-power.ch/'),
-          ('Plone', 'http://plone.org/'),
-          )
+LINKS = (
+    ('Presenation Power', 'https://presentation-power.ch/'),
+)
 
 # Social widget
 #SOCIAL = (('You can add links in your config file', '#'),

@@ -8,3 +8,6 @@
 /output
 Makefile
 develop_server.sh
+*.swp
+.idea
+pyvenv.cfg
