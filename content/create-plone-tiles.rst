@@ -24,7 +24,9 @@ Creating the tile
 -----------------
 
 Tiles are like all other view components in Plone registered via ZCML. A tile
-configuration looks like this: ::
+configuration looks like this:
+
+.. code-block:: xml
 
     <configure xmlns:plone="http://namespaces.plone.org/plone">
 
@@ -53,7 +55,9 @@ we need for our schema is a reference to a contact person stored in Plone.
 For our tile we can reuse plenty of code from the existingcontent tile in 
 *plone.app.standardtiles*, which is also a good source for other examples.
 
-Let's look at the schema first: ::
+Let's look at the schema first:
+
+.. code-block:: python
 
     from plone.app.vocabularies.catalog import CatalogSource
     from plone.supermodel import model
@@ -70,14 +74,18 @@ The schema for our contact tile is easy. It is just a reference to a *ContactPer
 in our database. CatalogSource takes an arbitrary catalog query as parameters. It results in
 a select2 widget in edit mode for selecting a contact person.
 
-The view class is a subclass from the ExistingContentTile without any customization ::
+The view class is a subclass from the ExistingContentTile without any customization
+
+.. code-block:: python
 
     from plone.app.standardtiles.existingcontent import ExistingContentTile
 
     class ContactCardTile(ExistingContentTile):
      """ A tile for mosaic representing a contact card """
 
-For the template we use a simple `hCard`_ markup as a snippet ::
+For the template we use a simple `hCard`_ markup as a snippet
+
+.. code-block:: python
 
     <div class="vcard" tal:define="context nocall:view/content_context;">
       <a class="url fn" href="#"
@@ -92,7 +100,9 @@ We asume our context has a schema field named *fullname*.
 
 We also want to test our tile, which is straight forward and can be taken almost literally
 from plone.app.standardtiles. Assume you have the testing boilerplate for your product
-set up with *plone.app.testing* ::
+set up with *plone.app.testing*
+
+.. code-block:: python
 
   def test_contact_card_tile(self):
         """The contact card content tile takes the uuid of a content object in the
@@ -131,7 +141,9 @@ Registering a tile
 
 Now our tile is complete and tested we need to register it to use it with
 plone.app.mosaic. This is done in the registry of Plone. In *registry.xml* of
-the GS profile of your product. ::
+the GS profile of your product.
+
+.. code-block:: xml
 
     <record name="plone.app.tiles">
      <field type="plone.registry.field.List">
@@ -143,7 +155,9 @@ the GS profile of your product. ::
      </value>
      </record>
 
-To display the tile in the mosaic toolbar we need the following configuration ::
+To display the tile in the mosaic toolbar we need the following configuration
+
+.. code-block:: xml
 
     <records prefix="plone.app.mosaic.app_tiles.contact_person"
      interface="plone.app.mosaic.interfaces.ITile">
@@ -169,5 +183,5 @@ Have fun!
 .. _plone.app.mosaic: https://github.com/plone/plone.app.mosaic
 .. _hCard: markup http://microformats.org/wiki/hcard
 
-.. |Mosaic Tile Insert| image:: static/images/contact_card_tile_insert.png
-   :target: static/images/contact_card_tile_insert.png
+.. |Mosaic Tile Insert| image:: images/contact_card_tile_insert.png
+   :target: images/contact_card_tile_insert.png

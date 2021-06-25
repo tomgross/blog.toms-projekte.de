@@ -1,1 +1,1 @@
-pelican -t themes/pelican-bootstrap-responsive-theme/ -e SITEURL=http://localhost:8000 content
+bin/pelican content --theme-path themes/Flex --listen --debug --autoreload   --relative-urls

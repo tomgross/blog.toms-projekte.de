@@ -3,9 +3,10 @@
 
 AUTHOR = 'Tom Gross'
 SITENAME = 'Toms Blog'
-SITEURL = 'https://blog.itsonsense.com'
+SITETITLE = 'Toms Blog'
+SITEURL = 'http://localhost:8000'
 
-THEME = "themes/pelican-bootstrap-responsive-theme"
+THEME = "themes/Flex"
 
 TIMEZONE = 'Europe/Zurich'
 
@@ -18,9 +19,7 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 # Blogroll
-LINKS = (
-    ('Presenation Power', 'https://presentation-power.ch/'),
-)
+LINKS = ()
 
 # Social widget
 #SOCIAL = (('You can add links in your config file', '#'),
@@ -32,5 +31,6 @@ DEFAULT_PAGINATION = 10
 #RELATIVE_URLS = True
 DISQUS_SITENAME = "tomsblog"
 
-PIWIK_URL = "piwik.toms-projekte.de"
-PIWIK_SITE_ID = "2"
+# PIWIK_URL = "piwik.toms-projekte.de"
+# PIWIK_SITE_ID = "2"
+GOOGLE_TAG_MANAGER = "G-TJYB1NJ7KN"

@@ -4,10 +4,12 @@
 /bin
 /cache
 /include
-/lib
+/lib*
 /output
 Makefile
 develop_server.sh
 *.swp
 .idea
+pyvenv.cfg
+pip-selfcheck.json
 pyvenv.cfg
