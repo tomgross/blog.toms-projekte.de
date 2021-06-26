@@ -3,4 +3,4 @@
 	url = https://github.com/tomgross/pelican-bootstrap-responsive-theme.git
 [submodule "themes/Flex"]
 	path = themes/Flex
-	url = https://github.com/tomgross/Flex.git
+    url = ../Flex.git
