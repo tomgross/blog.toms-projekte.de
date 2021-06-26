@@ -23,8 +23,12 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install pelican
+    - name: Install SSH Key
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.SSH_DEPLOYMENT_KEY }}
+        known_hosts: 'itconsense.com'
     - name: Deploy Blog
       run: |
         pelican content --theme-path themes/Flex -s publishconf.py
-        ssh-add {{ secrets.SSH_DEPLOYMENT_KEY }}
         rsync -e "ssh -p 22" -P -rvzc --include tags --cvs-exclude --delete "output"/ "${{ secrets.SSH_USERNAME }}@itconsense.com:/var/www/html/blog"
