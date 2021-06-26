@@ -25,4 +25,6 @@ jobs:
         pip install pelican
     - name: Deploy Blog
       run: |
-        ./upload.sh
+        pelican content --theme-path themes/Flex -s publishconf.py
+        ssh-add {{ secrets.SSH_DEPLOYMENT_KEY }}
+        rsync -e "ssh -p 22" -P -rvzc --include tags --cvs-exclude --delete "output"/ "${{ secrets.SSH_USERNAME }}@itconsense.com:/var/www/html/blog"
