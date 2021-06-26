@@ -26,9 +26,11 @@ jobs:
     - name: Install SSH Key
       uses: shimataro/ssh-key-action@v2
       with:
-        key: ${{ secrets.SSH_DEPLOYMENT_KEY }}
-        known_hosts: 'itconsense.com'
+        key: ${{ secrets.SSH_DEPLOYMENTKEY }}
+        known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
+    - name: Adding Known Hosts
+      run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
     - name: Deploy Blog
       run: |
         pelican content --theme-path themes/Flex -s publishconf.py
-        rsync -e "ssh -p 22" -P -rvzc --include tags --cvs-exclude --delete "output"/ "${{ secrets.SSH_USERNAME }}@itconsense.com:/var/www/html/blog"
+        rsync -e "ssh -p 22" -P -rvzc --include tags --cvs-exclude --delete "output"/ "${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:/var/www/html/blog"
