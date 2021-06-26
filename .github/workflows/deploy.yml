@@ -25,4 +25,4 @@ jobs:
         pip install pelican
     - name: Deploy Blog
       run: |
-        upload.sh
+        ./upload.sh
