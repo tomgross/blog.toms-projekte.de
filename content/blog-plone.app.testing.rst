@@ -35,12 +35,16 @@ Because there is no test class there is no *self.<whatever-method>* supported
 in doctests. Greping *'self'* in all doctests and replacing it with layer
 specific code is usually the way to go.
 
- >>> self.setRoles(['Manager])
+.. code-block:: python
+
+   >>> self.setRoles(['Manager])
 
 would turn into
 
- >>> from plone.app.testing import TEST_USER_ID, setRoles
- >>> setRoles(layer['portal'], TEST_USER_ID, ['Manager'])
+.. code-block:: python
+
+   >>> from plone.app.testing import TEST_USER_ID, setRoles
+   >>> setRoles(layer['portal'], TEST_USER_ID, ['Manager'])
 
 And you don't need to use any Zope based variant of doctest. Just use plain python doctest and suite.
 
@@ -48,10 +52,14 @@ And you don't need to use any Zope based variant of doctest. Just use plain pyth
 
 One thing I could track down is a cookie reset if diazo is turned on. This is because of a subrequest which is issued during traversal. You can disable diazo during testing:
 
+.. code-block:: python
+
   >>> response = self.publish(docpath, basic_auth, env={'diazo.off': "1"})
 
 To debug functional testing you need the following patch in your (failing)
-test. ::
+test.
+
+.. code-block:: python
 
         def raising(self, info):
             import traceback
@@ -65,13 +73,19 @@ Fifth: **Testbrowser** Using zope.testbrowser is supported with
 plone.app.testing too. There are two main differences: a browser instance is
 initiated with the application: like this:
 
+.. code-block:: python
+
    >>> browser = Browser(self.layer['app'])   # in functional test cases
 
 or
-  
+
+.. code-block:: python
+
    >>> browser = Browser(layer['app'])    # in doctests
 
 You need to commit changes *before!* you initiate the browser.
+
+.. code-block:: python
 
    >>> from transaction import commit
    >>> commit()
@@ -80,7 +94,9 @@ Sixth: **plone.protect**
 
 If you are using a view, which uses CSRF protection via plone.protect you
 may want to disable this feature in tests temporarily. You can call your
-view by injecting a CSRF token into the request like this: ::
+view by injecting a CSRF token into the request like this:
+
+.. code-block:: python
 
   >>> from plone.protect import createToken
   >>> request.form['_authenticator'] = createToken()
@@ -96,6 +112,7 @@ And now happy porting to plone.app.testing of your addons. BTW the porting of
 some `products is left for core Plone`_. If you want to give it a try ... go ahead. :)
 
 See you on the Plone Conference in Bristol,
+
 Tom
 
 .. _plone.app.testing: https://pypi.python.org/pypi/plone.app.testing

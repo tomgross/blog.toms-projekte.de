@@ -23,7 +23,7 @@ increase. What I did was changing my buildout the following way:
 With the `hexagonit.recipe.download`_-recipe I download the
 Java-sources of the yui-compressor
 
-::
+.. code-block:: ini
 
     [yui-compressor]
     recipe = hexagonit.recipe.download
@@ -37,7 +37,7 @@ ant are installed and working. If ant is not in the PATH-environment,
 the recipe provides the *ant-home*-option for specifying the location of
 ant.
 
-::
+.. code-block:: ini
 
     [yui-compressor-build]
     recipe = collective.recipe.ant
