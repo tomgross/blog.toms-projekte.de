@@ -34,7 +34,7 @@ Vyper documentation but some source code digging gave me an elegant solution:
         print(get_vyper_contract(["hello.vy"]))
 
 
-Assuming we have the following Vyper smart contract ...
+Assuming we have the following Vyper smart contract as *hello.vy* file ...
 
 .. code-block:: python
 
