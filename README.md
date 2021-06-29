@@ -28,5 +28,5 @@ Install Pelican blog generator
 Generate blog
 
 ```
- $ pelican -t themes/pelican-bootstrap-responsive-theme/ content
+ $ pelican -t themes/Flex/ content
 ```
