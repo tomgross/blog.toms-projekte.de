@@ -5,6 +5,7 @@ Fixing a broken toplevel acl_users
 :category: Plone
 :tags: Plone, Authentication
 :slug: fixing-a-broken-toplevel-acl_users
+:amazon_product: placement=B0058NBIQ4&asins=B0058NBIQ4&linkId=cc39108d00358d468d6c2ab11644ba69
 
 Sometimes someone forgets his admin password. This is easy to reset with
 the adduser command of Zope. But what if someone removes the top level

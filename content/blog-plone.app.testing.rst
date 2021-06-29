@@ -5,6 +5,7 @@ Porting tests to plone.app.testing for Plone 5
 :category: Plone
 :tags: Plone, Testing, Plone5
 :slug: porting-to-plone.app.testing
+:amazon_product: placement=B0058NBIQ4&asins=B0058NBIQ4&linkId=cc39108d00358d468d6c2ab11644ba69
 
 A major version of a piece of software always means to leave behind
 some burdon. Plone ships with two testing framworks since Plone 4.

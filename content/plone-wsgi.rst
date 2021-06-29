@@ -5,6 +5,8 @@ Run Plone 5 with WSGI
 :category: Plone
 :tags: Plone, WSGI, Plone5, Deployment
 :slug: run-plone-with-wsgi
+:amazon_product: placement=B0058NBIQ4&asins=B0058NBIQ4&linkId=cc39108d00358d468d6c2ab11644ba69
+
 
 Now Zope has `documented`_ support of WSGI deployment, Plone can have it too.
 To make it happen we can use a minimal buildout with some minor adjustments: ::

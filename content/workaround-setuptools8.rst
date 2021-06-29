@@ -5,13 +5,17 @@ Workaround setuptools 8.0 bug with zc.buildout
 :category: Plone
 :tags: Plone, setuptools, workaround
 :slug: workaround-setuptools-buildout-bug
+:amazon_product: placement=B0058NBIQ4&asins=B0058NBIQ4&linkId=cc39108d00358d468d6c2ab11644ba69
+
 
 Buildout always fetches the latest version of setuptools
 for bootstraping. No matter what is defined in versions.cfg.
 It is possible to set the version of zc.buildout when
 bootstraping but not the one of setuptools.
 
-This behavior is hardcoded in `bootstrap.py`. ::
+This behavior is hardcoded in `bootstrap.py`.
+
+.. code-block:: python
 
   77 ez = {}
   78 exec(urlopen('https://bootstrap.pypa.io/ez_setup.py'
@@ -20,7 +24,9 @@ This behavior is hardcoded in `bootstrap.py`. ::
 
 Unfortunately there are some incompatible changes (a bug?)
 in setuptools 8.0 which prevent zc.buildout from bootstraping.
-It fails with the following error: ::
+It fails with the following error:
+
+.. code-block:: bash
 
   tom@localhost:~/demobuildout> python2.7 bootstrap.py 
   Downloading https://pypi.python.org/packages/source/s/setuptools/setuptools-8.0.zip
@@ -61,14 +67,18 @@ to work fine. Do the following:
     new terminal.
 
  5. Now change the line where it downloads ez_setup.py in your
-    bootstrap.py file to use the patched ez_setup.py.::
+    bootstrap.py file to use the patched ez_setup.py.
+
+.. code-block:: python
 
      77 ez = {}
      78 exec(urlopen('http://localhost:8000/ez_setup.py'
      79             ).read(), ez)
      80 if not options.allow_site_packages:
 
- 6. You are ready to start your working buildout. ::
+ 6. You are ready to start your working buildout.
+
+.. code-block:: bash
 
      tom@linux-zoc2:~/demobuildout> python bootstrap.py 
      Downloading https://pypi.python.org/packages/source/s/setuptools/setuptools-7.0.zip

@@ -5,6 +5,7 @@ Create HTML Tiles for Plone (Mosaic)
 :category: Plone
 :tags: Plone, Mosaic, Plone5, Development
 :slug: create-html-tiles-for-plone-mosaic
+:amazon_product: placement=B0058NBIQ4&asins=B0058NBIQ4&linkId=cc39108d00358d468d6c2ab11644ba69
 
 The new kid on the block for creating flexible layouts in Plone is `plone.app.mosaic`_.
 It is available for Plone 5 as an addon and will be included in a future version of core

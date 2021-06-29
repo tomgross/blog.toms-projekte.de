@@ -5,6 +5,8 @@ Using archetypes.referencebrowserwidget with Plone 3.3
 :category: Plone
 :tags: Archetypes, Plone, Referencebrowser, Widget
 :slug: referencewidget-plone
+:amazon_product: placement=B0058NBIQ4&asins=B0058NBIQ4&linkId=cc39108d00358d468d6c2ab11644ba69
+
 
 If you need to reference objects from big containers, the current
 ATReferenceBrowser product, which is bundled with Plone may not be your
@@ -15,20 +17,22 @@ should be tests for all the features it provides. Well, and here it is.
 It is not finished yet but it works and is used in some productive
 environments.
 
-You can include it like any other product in your buildout ::
+You can include it like any other product in your buildout
 
- [buildout] 
- ... 
- eggs = 
-   ... 
-   archetypes.referencebrowserwidget
-  
- [instance]
- ... 
- zcml = 
-   ...
-   archetypes.referencebrowserwidget 
- ...
+.. code-block:: ini
+
+     [buildout]
+     ...
+     eggs =
+       ...
+       archetypes.referencebrowserwidget
+
+     [instance]
+     ...
+     zcml =
+       ...
+       archetypes.referencebrowserwidget
+     ...
 
 This will enable it for being installed via quickinstaller. If you do so
 the skin of ATReferenceBrowserWidget gets overridden by the one of
@@ -46,21 +50,23 @@ http://svn.plone.org/svn/archetypes/MoreFieldsAndWidgets/ATReferenceBrowserWidge
 
 named "*Products.ATReferenceBrowserWidget" * in the
 "*src*"-directory of your buildout. And change the *buildout.cfg* to
-the following: ::
+the following:
 
- [buildout]
- ...
- develop = src/Products.ATReferenceBrowserWidget
- 
- [versions]
- Products.ATReferenceBrowserWidget = 3.0-withatref
- 
- [instance]
- ...
- eggs = 
-   ${buildout:eggs}
-   Plone
-   archetypes.referencebrowserwidget
- ...
+.. code-block:: ini
+
+     [buildout]
+     ...
+     develop = src/Products.ATReferenceBrowserWidget
+
+     [versions]
+     Products.ATReferenceBrowserWidget = 3.0-withatref
+
+     [instance]
+     ...
+     eggs =
+       ${buildout:eggs}
+       Plone
+       archetypes.referencebrowserwidget
+     ...
 
 That's it. This will enable you the full power of the new widget. Have fun!

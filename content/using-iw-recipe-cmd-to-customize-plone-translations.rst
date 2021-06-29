@@ -5,6 +5,8 @@ Customize Plone translations with iw.recipe.cmd
 :category: Plone
 :tags: buildout, i18n, plone
 :slug: using-iw-recipe-cmd-to-customize-plone-translations
+:amazon_product: placement=B0058NBIQ4&asins=B0058NBIQ4&linkId=cc39108d00358d468d6c2ab11644ba69
+
 
 Sometimes the good translations of Plone do not fit your usecase or
 screen space. Overriding the translations in a pre-buildout area was
@@ -19,7 +21,9 @@ Linux) is to maintain the translations in a directory *i18n* in the
 buildout and let a recipe copy it to the instance.
 
 For the recipe I use `iw.recipe.cmd`_ and the buildout snippet looks
-like this: ::
+like this:
+
+.. code-block:: ini
 
  [i18n]
  recipe = iw.recipe.cmd

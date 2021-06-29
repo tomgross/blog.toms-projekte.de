@@ -5,6 +5,8 @@ New Book: "Plone 3 Multimedia"
 :category: Plone
 :tags: Multimedia, Plone
 :slug: new-book-plone-3-multimedia
+:amazon_product: placement=B0058NBIQ4&asins=B0058NBIQ4&linkId=cc39108d00358d468d6c2ab11644ba69
+
 
 I was tired of reading and answering all the p4a related questions on
 the Plone user mailing list and wrote a book about it ;-).

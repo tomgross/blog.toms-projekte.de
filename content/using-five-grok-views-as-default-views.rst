@@ -5,6 +5,8 @@ Using five.grok views as default views
 :category: Plone
 :tags: Grok, Plone
 :slug: using-five-grok-views-as-default-views
+:amazon_product: placement=B0058NBIQ4&asins=B0058NBIQ4&linkId=cc39108d00358d468d6c2ab11644ba69
+
 
 Once you get used to the power of grok in Plone via `five.grok`_ you
 never want to miss it and use it for all and everything. Unfortunately

@@ -5,6 +5,8 @@ Minifying JavaScript and CSS with buildout
 :tags: Multimedia, Plone
 :category: Plone
 :slug: minifying-javascript-and-css-with-buildout
+:amazon_product: placement=B0058NBIQ4&asins=B0058NBIQ4&linkId=cc39108d00358d468d6c2ab11644ba69
+
 
 An easy way to increase the performance of a web-page is to minify the
 used CSS and JavaScript resources. There are ready `available tools`_
@@ -52,7 +54,7 @@ and \*.js-files and minify them, if needed. The products don't
 necessarily need to be check-outs or development-eggs. Already packaged
 3rd party eggs can be walked too.
 
-::
+.. code-block:: ini
 
     [minify]
     recipe = collective.recipe.minify
@@ -66,7 +68,7 @@ necessarily need to be check-outs or development-eggs. Already packaged
 
 The full inclusion of all parts looks like this:
 
-::
+.. code-block:: ini
 
     [buildout]
     parts =

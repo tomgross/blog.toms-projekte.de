@@ -5,6 +5,8 @@ Migrating to Plone 4. Part 1
 :category: Plone
 :tags: Plone
 :slug: migrating-to-plone-4-part-1
+:amazon_product: placement=B0058NBIQ4&asins=B0058NBIQ4&linkId=cc39108d00358d468d6c2ab11644ba69
+
 
 Recently I tried to migrate the website of the `university I work for`_
 to Plone 4. The first thing I did was to checkout the development
@@ -44,5 +46,5 @@ Well now the instance with all dependencies still does not start because
 of the p4a.plonecalendar, which still imports the object events from
 zope.app.event. This is where I stopped today.... more to come ....
 
-.. _university I work for: http://www.fhnw.ch
+.. _university I work for: https://www.fhnw.ch/en
 .. _haufe.eggserver: http://pypi.python.org/pypi/haufe.eggserver/

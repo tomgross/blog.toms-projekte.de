@@ -5,6 +5,7 @@ Use vyper as Python library
 :category: ETH
 :tags: Etherum, Vyper, Blockchain
 :slug: vyper-as-python-library
+:amazon_product: placement=3960091109&asins=3960091109&linkId=35485d7eb1cb39f82e39a3c9eee2bfa5
 
 One option to program the EVM (Etherum Virtual Machine) is Vyper. As oposed to Solidity,
 which borows from JavaScript, Vyper shares its syntax with Python. Installing Vyper
