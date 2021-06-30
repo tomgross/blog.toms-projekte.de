@@ -17,3 +17,5 @@ FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
+
+GOOGLE_SITE_VERIFICATION = "wBi2eyY108FlsybQEuOIxSz_v9FuzFp2mpBcZU7R_jI"

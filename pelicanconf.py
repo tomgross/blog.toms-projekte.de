@@ -34,3 +34,7 @@ DISQUS_SITENAME = "tomsblog"
 # PIWIK_URL = "piwik.toms-projekte.de"
 # PIWIK_SITE_ID = "2"
 GOOGLE_TAG_MANAGER = "G-TJYB1NJ7KN"
+
+# SEO Plugin
+SEO_REPORT = True
+SEO_ENHANCER = True

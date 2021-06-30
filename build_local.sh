@@ -1,1 +1,1 @@
-bin/pelican content --theme-path themes/Flex --listen --debug --autoreload   --relative-urls
+bin/pelican content --theme-path themes/Flex --listen --debug --autoreload --verbose  --relative-urls

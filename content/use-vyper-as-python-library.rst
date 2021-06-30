@@ -5,6 +5,7 @@ Use vyper as Python library
 :category: ETH
 :tags: Etherum, Vyper, Blockchain
 :slug: vyper-as-python-library
+:summary: This article shows how the vyper langunge can be used within a Python script.
 :amazon_product: placement=3960091109&asins=3960091109&linkId=35485d7eb1cb39f82e39a3c9eee2bfa5
 
 One option to program the EVM (Etherum Virtual Machine) is Vyper. As oposed to Solidity,
@@ -58,3 +59,5 @@ Assuming we have the following Vyper smart contract as *hello.vy* file ...
 
 This technique helps us to create real world applications with web frameworks like Flask
 and immutable smart contract storages with Python (and Vyper) only.
+
+You can find a full example here in `this blog <{filename}/how_to_develop_an_ethereum_contract_using_python_vyper_flask.rst>`_
